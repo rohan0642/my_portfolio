@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Rohan Sharma</title>
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            accent: '#6366f1',
+            neon: '#22d3ee',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class="bg-primary text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-primary border-b border-gray-700 shadow-sm">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
+      <ul class="flex gap-6 text-gray-300 font-medium">
+        <li><a href="index.html" class="hover:text-neon">Home</a></li>
+        <li><a href="about.html" class="hover:text-neon">About</a></li>
+        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
+        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
+        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
+        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
+        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
+        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Skills Section -->
+  <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-neon mb-12">My Skill Set</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 text-left">
+
+        <!-- Card 1 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="fade-up">
+          <h3 class="text-xl font-bold text-accent mb-4">Programming Languages</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>Python</li>
+            <li>MySQL</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>C</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold text-accent mb-4">Engineering Tools</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>AutoCAD</li>
+            <li>MATLAB</li>
+            <li>PSpice</li>
+            <li>SCADA, PSCAD</li>
+            <li>ETAP</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold text-accent mb-4">Software & Dev Tools</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>Linux</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-xl font-bold text-accent mb-4">Soft Skills</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>Leadership & Initiative</li>
+            <li>Analytical Thinking</li>
+            <li>Team Collaboration</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-700">
+    <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
+  </footer>
+
+  <script>AOS.init();</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activities | Rohan Sharma</title>
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            accent: '#6366f1',
+            neon: '#22d3ee',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class="bg-primary text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-primary border-b border-gray-700 shadow-sm">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
+      <ul class="flex gap-6 text-gray-300 font-medium">
+        <li><a href="index.html" class="hover:text-neon">Home</a></li>
+        <li><a href="about.html" class="hover:text-neon">About</a></li>
+        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
+        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
+        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
+        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
+        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Activities Section -->
+  <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-neon mb-12">My Activities</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+
+        <!-- Activity 1 -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-neon shadow-lg" data-aos="zoom-in">
+          <h3 class="text-2xl font-semibold text-accent mb-2">📚 Samarpan NGO</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>Volunteer teacher for underprivileged children</li>
+            <li>Content creator and storyteller for campaigns</li>
+            <li>Organized events, workshops, and awareness drives</li>
+          </ul>
+          <a href="https://samarpan.netlify.app" target="_blank" class="text-neon underline hover:text-accent mt-2 inline-block">Visit NGO Website</a>
+        </div>
+
+         <!-- Activity 2 -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-neon shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-accent mb-2">👥 Team & Leadership</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
+            <li>Led junior teams during group projects & events</li>
+            <li>Mentored peers in programming and development</li>
+            <li>Organized club outings, educational tours</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-700">
+    <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
+  </footer>
+
+  <script>AOS.init();</script>
+</body>
+</html>
