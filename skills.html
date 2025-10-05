@@ -8,6 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -25,52 +26,31 @@
       }
     };
   </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style> html { scroll-behavior: smooth; } </style>
 </head>
 <body class="bg-primary text-white font-sans">
 
-  <!-- ✅ Navbar -->
-  <header class="bg-primary border-b border-gray-700 shadow-sm">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
+  <!-- ✅ Dynamic Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    // Load navbar dynamically from external file
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex gap-6 text-gray-300 font-medium">
-        <li><a href="index.html" class="hover:text-neon">Home</a></li>
-        <li><a href="about.html" class="hover:text-neon">About</a></li>
-        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
-        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
-        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
-        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
-      </ul>
-
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"/>
-        </svg>
-      </button>
-    </nav>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-gray-700">
-      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300 font-medium">
-        <li><a href="index.html" class="hover:text-neon">Home</a></li>
-        <li><a href="about.html" class="hover:text-neon">About</a></li>
-        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
-        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
-        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
-        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+        // Initialize mobile menu toggle after navbar loads
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+          btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+          });
+        }
+      });
+  </script>
 
   <!-- ✅ Skills Section -->
   <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
@@ -130,14 +110,6 @@
     <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
   </footer>
 
-  <script>
-    // Navbar toggle script
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
