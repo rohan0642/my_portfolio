@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Experience | Rohan Sharma</title>
+  <title>Contact | Rohan Sharma</title>
   <link rel="icon" href="favicon.ico" />
+
+  <!-- Tailwind & AOS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  
-  <!-- Tailwind Customization -->
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -27,14 +32,14 @@
       }
     };
   </script>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style> html { scroll-behavior: smooth; } </style>
 </head>
 
 <body class="bg-primary text-white font-sans">
 
-  <!-- ✅ Navbar (Responsive) -->
+  <!-- Navbar -->
   <header class="bg-primary border-b border-gray-700 shadow-sm">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
@@ -44,11 +49,10 @@
         <li><a href="index.html" class="hover:text-neon">Home</a></li>
         <li><a href="about.html" class="hover:text-neon">About</a></li>
         <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
-        <li><a href="experience.html" class="text-neon font-semibold">Experience</a></li>
+        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
         <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
         <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+        <li><a href="contact.html" class="text-neon font-semibold">Contact</a></li>
       </ul>
 
       <!-- Mobile Menu Button -->
@@ -67,55 +71,46 @@
         <li><a href="index.html" class="hover:text-neon">Home</a></li>
         <li><a href="about.html" class="hover:text-neon">About</a></li>
         <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
-        <li><a href="experience.html" class="text-neon font-semibold">Experience</a></li>
+        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
         <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
         <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+        <li><a href="contact.html" class="text-neon font-semibold">Contact</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- 🧠 Experience Section -->
-  <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-neon mb-12">Experience</h2>
+  <!-- Contact Section -->
+  <section class="pt-20 py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-neon mb-8">Let's Connect</h2>
+      <p class="text-gray-300 mb-12">I'm always open to collaborating on meaningful projects, exploring tech ideas, or just having a good conversation!</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Direct Info -->
+      <div class="text-lg text-gray-300 mb-10 space-y-3" data-aos="fade-up" data-aos-delay="100">
+        <p><strong>Email:</strong> <a href="mailto:vishwakarma0642@gmail.com" class="text-neon hover:underline">vishwakarma0642@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+917667800204" class="text-neon hover:underline">+91 7667800204</a></p>
+        <p><strong>Location:</strong> Haldia, West Bengal, India</p>
+      </div>
 
-        <!-- Chegg -->
-        <div class="bg-gray-800 p-6 rounded-xl border border-neon shadow-lg" data-aos="zoom-in">
-          <h3 class="text-2xl font-bold text-accent mb-2">Subject Matter Expert</h3>
-          <p class="text-gray-400 mb-2">Chegg India (Feb 2024 – Apr 2025)</p>
-          <ul class="list-disc list-inside text-gray-300 text-left space-y-1">
-            <li>Provided clear math solutions & conceptual explanations</li>
-            <li>Contributed to learning efficiency of global students</li>
-            <li>Named ‘Top Performer’ for exceptional content quality</li>
-          </ul>
-        </div>
-
-        <!-- Outlier.ai -->
-        <div class="bg-gray-800 p-6 rounded-xl border border-neon shadow-lg" data-aos="zoom-in" data-aos-delay="100">
-          <h3 class="text-2xl font-bold text-accent mb-2">AI Trainer</h3>
-          <p class="text-gray-400 mb-2">Outlier.ai (Jan 2024 – Jul 2025)</p>
-          <ul class="list-disc list-inside text-gray-300 text-left space-y-1">
-            <li>Curated and reviewed AI-generated math datasets</li>
-            <li>Ensured conceptual accuracy and training quality</li>
-            <li>Improved performance of math models for education</li>
-          </ul>
-        </div>
-
+      <!-- Social Links -->
+      <div class="flex justify-center flex-wrap gap-6 text-3xl text-neon" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://www.linkedin.com/in/rohan-sharma-6b19a5207/" target="_blank" title="LinkedIn" class="hover:text-accent"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/rohan0642" target="_blank" title="GitHub" class="hover:text-accent"><i class="fab fa-github"></i></a>
+        <a href="mailto:vishwakarma0642@gmail.com" title="Email" class="hover:text-accent"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/917667800204" target="_blank" title="WhatsApp" class="hover:text-accent"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/vishwakarma_0642" target="_blank" title="Instagram" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/yourusername" target="_blank" title="Facebook" class="hover:text-accent"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- 🌙 Footer -->
-  <footer class="text-center py-6 border-t border-gray-700 bg-primary">
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-gray-700">
     <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
   </footer>
 
-  <!-- JS -->
   <script>
+    // Navbar toggle
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
