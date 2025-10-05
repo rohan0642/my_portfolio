@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Rohan Sharma</title>
   <link rel="icon" href="favicon.ico" />
-  
+
   <!-- Tailwind & AOS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  
+
   <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
-  <!-- Replace "your-kit-code.js" with your own FA Kit code or use CDN below instead -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Tailwind Config -->
@@ -35,7 +33,6 @@
     };
   </script>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style> html { scroll-behavior: smooth; } </style>
 </head>
@@ -46,21 +43,44 @@
   <header class="bg-primary border-b border-gray-700 shadow-sm">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
-      <ul class="flex gap-6 text-gray-300 font-medium">
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6 text-gray-300 font-medium">
         <li><a href="index.html" class="hover:text-neon">Home</a></li>
         <li><a href="about.html" class="hover:text-neon">About</a></li>
         <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
         <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
         <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
         <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+        <li><a href="contact.html" class="text-neon font-semibold">Contact</a></li>
       </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-gray-700">
+      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300 font-medium">
+        <li><a href="index.html" class="hover:text-neon">Home</a></li>
+        <li><a href="about.html" class="hover:text-neon">About</a></li>
+        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
+        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
+        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
+        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
+        <li><a href="contact.html" class="text-neon font-semibold">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- Contact Section -->
-  <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
+  <section class="pt-20 py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-neon mb-8">Let's Connect</h2>
       <p class="text-gray-300 mb-12">I'm always open to collaborating on meaningful projects, exploring tech ideas, or just having a good conversation!</p>
@@ -74,24 +94,12 @@
 
       <!-- Social Links -->
       <div class="flex justify-center flex-wrap gap-6 text-3xl text-neon" data-aos="fade-up" data-aos-delay="200">
-        <a href="https://www.linkedin.com/in/rohan-sharma-6b19a5207/" target="_blank" title="LinkedIn" class="hover:text-accent">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/rohan0642" target="_blank" title="GitHub" class="hover:text-accent">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:vishwakarma0642@gmail.com" title="Email" class="hover:text-accent">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/917667800204" target="_blank" title="WhatsApp" class="hover:text-accent">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/vishwakarma_0642" target="_blank" title="Instagram" class="hover:text-accent">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/yourusername" target="_blank" title="Facebook" class="hover:text-accent">
-          <i class="fab fa-facebook"></i>
-        </a>
+        <a href="https://www.linkedin.com/in/rohan-sharma-6b19a5207/" target="_blank" title="LinkedIn" class="hover:text-accent"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/rohan0642" target="_blank" title="GitHub" class="hover:text-accent"><i class="fab fa-github"></i></a>
+        <a href="mailto:vishwakarma0642@gmail.com" title="Email" class="hover:text-accent"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/917667800204" target="_blank" title="WhatsApp" class="hover:text-accent"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/vishwakarma_0642" target="_blank" title="Instagram" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/yourusername" target="_blank" title="Facebook" class="hover:text-accent"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
   </section>
@@ -101,6 +109,14 @@
     <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
   </footer>
 
-  <script>AOS.init();</script>
+  <script>
+    // Navbar toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
