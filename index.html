@@ -22,61 +22,101 @@
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
+          },
+          boxShadow: {
+            glow: '0 0 20px rgba(34, 211, 238, 0.4)',
+          },
+        },
+      },
     };
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
+
+    /* Floating Image Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float { animation: float 4s ease-in-out infinite; }
+
+    /* Fade-in Up Animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 1s ease-out forwards; }
   </style>
 </head>
 <body class="bg-primary text-white font-sans">
 
   <!-- Navbar -->
-  <header class="bg-primary border-b border-gray-700 shadow-sm">
+  <header class="fixed top-0 w-full z-50 bg-primary/80 backdrop-blur-md border-b border-gray-700">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
-      <ul class="flex gap-6 text-gray-300 font-medium">
-        <li><a href="index.html" class="hover:text-neon">Home</a></li>
-        <li><a href="about.html" class="hover:text-neon">About</a></li>
-        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
-        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
-        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
-        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-neon to-accent bg-clip-text text-transparent tracking-wide">
+        Rohan Sharma
+      </h1>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6 text-gray-300 font-medium">
+        <li><a href="index.html" class="hover:text-neon transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-neon transition">About</a></li>
+        <li><a href="skills.html" class="hover:text-neon transition">Skills</a></li>
+        <li><a href="experience.html" class="hover:text-neon transition">Experience</a></li>
+        <li><a href="projects.html" class="hover:text-neon transition">Projects</a></li>
+        <li><a href="activities.html" class="hover:text-neon transition">Activities</a></li>
+        <li><a href="articles.html" class="hover:text-neon transition">My Articles</a></li>
+        <li><a href="contact.html" class="hover:text-neon transition">Contact</a></li>
       </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-neon text-3xl focus:outline-none">☰</button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <ul id="menu" class="hidden flex-col gap-4 bg-primary border-t border-gray-700 p-6 md:hidden text-gray-300 font-medium">
+      <li><a href="index.html" class="hover:text-neon transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-neon transition">About</a></li>
+      <li><a href="skills.html" class="hover:text-neon transition">Skills</a></li>
+      <li><a href="experience.html" class="hover:text-neon transition">Experience</a></li>
+      <li><a href="projects.html" class="hover:text-neon transition">Projects</a></li>
+      <li><a href="activities.html" class="hover:text-neon transition">Activities</a></li>
+      <li><a href="articles.html" class="hover:text-neon transition">My Articles</a></li>
+      <li><a href="contact.html" class="hover:text-neon transition">Contact</a></li>
+    </ul>
   </header>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-12" data-aos="fade-up">
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 pt-32 md:pt-24 fade-up">
     
     <!-- Left: Profile Image -->
-    <div class="flex-shrink-0">
+    <div class="flex-shrink-0" data-aos="zoom-in">
       <img src="rohan.jpg" alt="Rohan Sharma"
-           class="w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-neon shadow-lg object-cover" />
+           class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-neon shadow-glow object-cover float" />
     </div>
 
     <!-- Right: Text Content -->
-    <div class="text-center md:text-left max-w-xl">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-neon animate-pulse">
+    <div class="text-center md:text-left max-w-xl" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-neon to-accent text-transparent bg-clip-text leading-snug">
         Hi, I'm Rohan Sharma
       </h1>
-      <p class="text-xl mt-4 text-gray-300">
-        Electrical Engineer • Developer • AI Trainer
+      <p class="text-lg md:text-xl mt-4 text-gray-300">
+        Electrical Engineer • Developer • Content Writer
+      </p>
+      <p class="mt-4 text-gray-400">
+        Passionate about creating solutions that merge <span class="text-neon font-semibold">technology</span>,
+        <span class="text-accent font-semibold">creativity</span>, and <span class="text-neon font-semibold">impact</span>.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
         <a href="projects.html"
-           class="bg-accent hover:bg-indigo-600 transition px-6 py-3 rounded-full text-white shadow-lg">
+           class="bg-accent hover:bg-indigo-600 transition px-6 py-3 rounded-full text-white shadow-lg flex items-center justify-center gap-2">
           🚀 View Projects
         </a>
         <a href="Rohan_Sharma_Resume.pdf" download
-           class="bg-white text-primary font-semibold hover:bg-gray-200 transition px-6 py-3 rounded-full shadow-lg">
+           class="bg-white text-primary font-semibold hover:bg-gray-200 transition px-6 py-3 rounded-full shadow-lg flex items-center justify-center gap-2">
           📄 Download Resume
         </a>
       </div>
@@ -84,13 +124,24 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 border-t border-gray-700">
-    <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
+  <footer class="text-center py-6 border-t border-gray-700 bg-primary/80 backdrop-blur-md">
+    <p class="text-sm text-gray-400">
+      © 2025 <span class="text-neon font-semibold">Rohan Sharma</span> — Built with ❤️
+    </p>
   </footer>
 
-  <!-- AOS Init -->
+  <!-- JS for Mobile Menu + AOS -->
   <script>
-    AOS.init();
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
   </script>
 </body>
 </html>
