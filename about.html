@@ -8,6 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -20,51 +22,80 @@
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
+          },
+          boxShadow: {
+            glow: '0 0 20px rgba(34, 211, 238, 0.4)',
+          },
+        },
+      },
     };
   </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style> html { scroll-behavior: smooth; } </style>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
+
 <body class="bg-primary text-white font-sans">
 
-  <!-- Navbar -->
-  <header class="bg-primary border-b border-gray-700 shadow-sm">
+  <!-- 🌐 Navbar -->
+  <header class="fixed top-0 w-full z-50 bg-primary/80 backdrop-blur-md border-b border-gray-700">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
-      <ul class="flex gap-6 text-gray-300 font-medium">
-        <li><a href="index.html" class="hover:text-neon">Home</a></li>
-        <li><a href="about.html" class="hover:text-neon">About</a></li>
-        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
-        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
-        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
-        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
-        <li><a href="articles.html" class="hover:text-neon">My Articles</a></li>
-        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-neon to-accent bg-clip-text text-transparent tracking-wide">
+        Rohan Sharma
+      </h1>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6 text-gray-300 font-medium">
+        <li><a href="index.html" class="hover:text-neon transition">Home</a></li>
+        <li><a href="about.html" class="text-neon font-semibold">About</a></li>
+        <li><a href="skills.html" class="hover:text-neon transition">Skills</a></li>
+        <li><a href="experience.html" class="hover:text-neon transition">Experience</a></li>
+        <li><a href="projects.html" class="hover:text-neon transition">Projects</a></li>
+        <li><a href="activities.html" class="hover:text-neon transition">Activities</a></li>
+        <li><a href="articles.html" class="hover:text-neon transition">My Articles</a></li>
+        <li><a href="contact.html" class="hover:text-neon transition">Contact</a></li>
       </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-neon text-3xl focus:outline-none">☰</button>
     </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <ul id="menu" class="hidden flex-col gap-4 bg-primary border-t border-gray-700 p-6 md:hidden text-gray-300 font-medium">
+      <li><a href="index.html" class="hover:text-neon transition">Home</a></li>
+      <li><a href="about.html" class="text-neon font-semibold">About</a></li>
+      <li><a href="skills.html" class="hover:text-neon transition">Skills</a></li>
+      <li><a href="experience.html" class="hover:text-neon transition">Experience</a></li>
+      <li><a href="projects.html" class="hover:text-neon transition">Projects</a></li>
+      <li><a href="activities.html" class="hover:text-neon transition">Activities</a></li>
+      <li><a href="articles.html" class="hover:text-neon transition">My Articles</a></li>
+      <li><a href="contact.html" class="hover:text-neon transition">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- About Section -->
-  <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
+  <!-- 🧠 About Section -->
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-neon mb-6">About Me</h2>
-      <p class="text-lg text-gray-300 mb-12">
-        I'm <strong>Rohan Sharma</strong>, currently pursuing B.Tech in Electrical Engineering at Haldia Institute of Technology. I'm passionate about blending software and engineering to solve real-world problems. I also actively contribute to social causes through Samarpan NGO as a teacher, volunteer, and content creator.
+      <p class="text-lg text-gray-300 mb-12 leading-relaxed">
+        I'm <strong>Rohan Sharma</strong>, currently pursuing B.Tech in Electrical Engineering at Haldia Institute of Technology. 
+        I'm passionate about blending software and engineering to solve real-world problems. 
+        I also actively contribute to social causes through <span class="text-accent font-semibold">Samarpan NGO</span> as a teacher, volunteer, and content creator.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="zoom-in">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-glow border border-neon" data-aos="zoom-in">
           <h3 class="text-xl font-semibold text-accent mb-2">🎓 B.Tech (Electrical Engineering)</h3>
           <p class="text-gray-400">Haldia Institute of Technology, Haldia<br>2023 – 2027</p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="zoom-in" data-aos-delay="100">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-glow border border-neon" data-aos="zoom-in" data-aos-delay="100">
           <h3 class="text-xl font-semibold text-accent mb-2">📘 Class 12</h3>
           <p class="text-gray-400">Holy Cross School, Bokaro<br>62.60%</p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-neon" data-aos="zoom-in" data-aos-delay="200">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-glow border border-neon" data-aos="zoom-in" data-aos-delay="200">
           <h3 class="text-xl font-semibold text-accent mb-2">📗 Class 10</h3>
           <p class="text-gray-400">Holy Cross School, Bokaro<br>66.20%</p>
         </div>
@@ -72,11 +103,25 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 border-t border-gray-700">
-    <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
+  <!-- 🌙 Footer -->
+  <footer class="text-center py-6 border-t border-gray-700 bg-primary/80 backdrop-blur-md">
+    <p class="text-sm text-gray-400">
+      © 2025 <span class="text-neon font-semibold">Rohan Sharma</span> — Built with ❤️
+    </p>
   </footer>
 
-  <script>AOS.init();</script>
+  <!-- JS -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
 </body>
 </html>
