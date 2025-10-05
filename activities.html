@@ -34,20 +34,44 @@
   <header class="bg-primary border-b border-gray-700 shadow-sm">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold text-neon tracking-wide">Rohan Sharma</h1>
-      <ul class="flex gap-6 text-gray-300 font-medium">
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6 text-gray-300 font-medium">
         <li><a href="index.html" class="hover:text-neon">Home</a></li>
         <li><a href="about.html" class="hover:text-neon">About</a></li>
         <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
         <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
         <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
-        <li><a href="activities.html" class="hover:text-neon">Activities</a></li>
+        <li><a href="activities.html" class="text-neon font-semibold">Activities</a></li>
         <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
       </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-gray-700">
+      <ul class="flex flex-col items-center gap-4 py-4 text-gray-300 font-medium">
+        <li><a href="index.html" class="hover:text-neon">Home</a></li>
+        <li><a href="about.html" class="hover:text-neon">About</a></li>
+        <li><a href="skills.html" class="hover:text-neon">Skills</a></li>
+        <li><a href="experience.html" class="hover:text-neon">Experience</a></li>
+        <li><a href="projects.html" class="hover:text-neon">Projects</a></li>
+        <li><a href="activities.html" class="text-neon font-semibold">Activities</a></li>
+        <li><a href="contact.html" class="hover:text-neon">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- Activities Section -->
-  <section class="py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
+  <section class="pt-20 py-20 px-6 bg-gradient-to-b from-primary to-gray-900" data-aos="fade-up">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold text-neon mb-12">My Activities</h2>
 
@@ -64,7 +88,7 @@
           <a href="https://samarpan.netlify.app" target="_blank" class="text-neon underline hover:text-accent mt-2 inline-block">Visit NGO Website</a>
         </div>
 
-         <!-- Activity 2 -->
+        <!-- Activity 2 -->
         <div class="bg-gray-800 p-6 rounded-xl border border-neon shadow-lg" data-aos="zoom-in" data-aos-delay="200">
           <h3 class="text-2xl font-semibold text-accent mb-2">👥 Team & Leadership</h3>
           <ul class="list-disc list-inside text-gray-300 space-y-1">
@@ -83,6 +107,14 @@
     <p class="text-sm text-gray-400">© 2025 Rohan Sharma. Built with ❤️</p>
   </footer>
 
-  <script>AOS.init();</script>
+  <script>
+    // Navbar toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
